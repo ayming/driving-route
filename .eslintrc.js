@@ -1,15 +1,10 @@
 // ESLint configuration
 // http://eslint.org/docs/user-guide/configuring
 module.exports = {
-  extends: [
-    'react-app',
-    'prettier',
-    'prettier/flowtype',
-    'prettier/react',
-  ],
+  extends: ['react-app', 'prettier', 'prettier/flowtype', 'prettier/react'],
   plugins: ['prettier'],
   globals: {
-    __DEV__: false
+    __DEV__: false,
   },
   env: {
     browser: true,
@@ -23,8 +18,8 @@ module.exports = {
         // https://github.com/prettier/prettier#options
         semi: false,
         singleQuote: true,
-        trailingComma: 'all',
+        trailingComma: 'es5',
       },
     ],
-  }
+  },
 }
