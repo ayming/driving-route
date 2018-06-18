@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom'
 import deepForceUpdate from 'react-deep-force-update'
 import qs from 'qs'
 
+import configureStore from './store/configureStore'
 import history from './history'
 import router from './router'
 import App from './components/App'
 // import registerServiceWorker from './registerServiceWorker'
 import './index.css'
 
-const context = {}
+const context = {
+  store: configureStore({}, { history }),
+}
 
 const container = document.getElementById('root')
 let currentLocation = history.location
