@@ -2,6 +2,10 @@
   "name": "driving-route",
   "version": "0.1.0",
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-regular": "^5.0.13",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/react-fontawesome": "^0.0.20",
     "classnames": "^2.2.6",
     "history": "^4.7.2",
     "node-waves": "^0.7.6",
