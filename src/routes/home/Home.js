@@ -1,6 +1,6 @@
 import React from 'react'
 
-import HomePanel from './components/HomePanel'
+import HomePanelContainer from './containers/HomePanelContainer'
 import GMap from '../../components/GMap'
 import s from './Home.scss'
 
@@ -17,7 +17,7 @@ class Home extends React.PureComponent {
     const { routeList } = this.state
     return (
       <div className={s.wrapper}>
-        <HomePanel
+        <HomePanelContainer
           className={s.panel}
           onRouteListChange={this.handleRouteListChange}
         />

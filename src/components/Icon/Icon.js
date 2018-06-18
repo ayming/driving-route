@@ -6,13 +6,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faCircleNotch from '@fortawesome/fontawesome-free-solid/faCircleNotch'
 import faMapMarkerAlt from '@fortawesome/fontawesome-free-solid/faMapMarkerAlt'
 import faCircle from '@fortawesome/fontawesome-free-regular/faCircle'
 import faDotCircle from '@fortawesome/fontawesome-free-regular/faDotCircle'
 
-fontawesome.library.add(faMapMarkerAlt, faCircle, faDotCircle)
+fontawesome.library.add(faCircleNotch, faMapMarkerAlt, faCircle, faDotCircle)
 
 const TYPE = {
+  loading: ['fas', 'circle-notch'],
   marker: ['fas', 'map-marker-alt'],
   circle: ['far', 'circle'],
   dot: ['far', 'dot-circle'],

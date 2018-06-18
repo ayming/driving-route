@@ -5,11 +5,14 @@ import classnames from 'classnames'
 import LocationAutocomplete from '../../../../components/LocationAutocomplete'
 import Icon from '../../../../components/Icon'
 import Button from '../../../../components/Button'
+import history from '../../../../history'
 import s from './HomePanel.scss'
 
 class HomePanel extends React.PureComponent {
   static propTypes = {
+    isLoading: PropTypes.bool.isRequired,
     onRouteListChange: PropTypes.func.isRequired,
+    submitRoute: PropTypes.func.isRequired,
   }
 
   lastRouteId = 0
@@ -71,19 +74,21 @@ class HomePanel extends React.PureComponent {
   handleSubmitClick = () => {
     const { routeList } = this.state
     const data = this.convertRouteList(routeList)
-    console.info('[HomePanel] data:', data)
     if (data.length < 2) {
       alert('Please input at least 2 locations')
     } else {
-      // TODO: submit
+      const { submitRoute } = this.props
+      submitRoute(data)
+        .then(({ token }) => history.push(`/route/${token}`))
+        .catch(() => alert('Submit fail!'))
     }
   }
 
   render() {
-    const { className } = this.props
+    const { className, isLoading } = this.props
     const { routeList } = this.state
     return (
-      <div className={className}>
+      <div className={classnames({ [s.loading]: isLoading }, className)}>
         <div className={s.container}>
           <div className={s.body}>
             <div className={s.top}>
@@ -145,7 +150,7 @@ class HomePanel extends React.PureComponent {
             </div>
             <div className={s.controlItem}>
               <Button className={s.button} onClick={this.handleSubmitClick}>
-                Submit
+                {isLoading ? <Icon type="loading" spin /> : 'Submit'}
               </Button>
             </div>
           </div>
