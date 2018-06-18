@@ -4,6 +4,7 @@ module.exports = {
   extends: ['react-app', 'prettier', 'prettier/flowtype', 'prettier/react'],
   plugins: ['prettier'],
   globals: {
+    google: false,
     __DEV__: false,
   },
   env: {

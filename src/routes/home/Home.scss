@@ -1,0 +1,24 @@
+.wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.panel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 400px;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.map {
+  height: 100%;
+  padding-left: 400px;
+
+  @media screen and (max-width: 400px) {
+    display: none;
+  }
+}
