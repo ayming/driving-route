@@ -23,6 +23,7 @@ class Button extends React.PureComponent {
     return (
       <button
         className={classnames(
+          'waves-effect waves-block',
           {
             [s.primary]: color === 'primary',
             [s.secondary]: color === 'secondary',

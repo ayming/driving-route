@@ -2,7 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import deepForceUpdate from 'react-deep-force-update'
 import qs from 'qs'
+import Waves from 'node-waves'
 import 'normalize.css'
+import 'node-waves/dist/waves.css'
 
 import configureStore from './store/configureStore'
 import history from './history'
@@ -11,6 +13,14 @@ import App from './components/App'
 // import registerServiceWorker from './registerServiceWorker'
 import './index.css'
 
+// ========================================================
+// Waves Setup
+// ========================================================
+Waves.init()
+
+// ========================================================
+// Render Setup
+// ========================================================
 const context = {
   store: configureStore({}, { history }),
 }
