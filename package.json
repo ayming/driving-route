@@ -2,8 +2,12 @@
   "name": "driving-route",
   "version": "0.1.0",
   "dependencies": {
+    "history": "^4.7.2",
+    "qs": "^6.5.2",
     "react": "^16.4.1",
+    "react-deep-force-update": "^2.1.1",
     "react-dom": "^16.4.1",
+    "universal-router": "^6.0.0",
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
