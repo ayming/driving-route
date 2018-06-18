@@ -24,4 +24,12 @@ const routes = {
   },
 }
 
+// The error page is available by permanent url for development mode
+if (__DEV__) {
+  routes.children.unshift({
+    path: '/error',
+    action: require('./error').default,
+  })
+}
+
 export default routes
