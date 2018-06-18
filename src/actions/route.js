@@ -45,11 +45,11 @@ export const getRoute = token => async dispatch => {
   try {
     const response = await fetch(`${API_BASE_PATH}route/${token}`)
     const data = await response.json()
-    dispatch(_token.success(data))
+    dispatch(_token.success({ ...data, token }))
     return data
   } catch (error) {
-    dispatch(_token.failure(error))
-    throw error
+    dispatch(_token.failure({ error, token }))
+    // throw error
   }
 }
 
