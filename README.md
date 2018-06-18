@@ -7,6 +7,10 @@
 * node `^8.11.0`
 * yarn `^1.6.0` or npm `^5.6.0`
 
+## API mock
+
+Please setup [mockApi](https://github.com/lalamove/challenge/blob/master/mockApi) first. Make sure `API_BASE_PATH` in `src/constants/api.js` to be same as your mock server.
+
 ## Installation
 
 It is recommended that you use [Yarn](https://yarnpkg.com/) for deterministic dependency management. `npm install` will suffice if `resolutions` in `package.json` is handled correctly.
@@ -34,3 +38,4 @@ $ yarn build  # Start to build project (or `npm run build`)
 * https://github.com/facebook/create-react-app
 * https://github.com/kriasoft/react-starter-kit
 * https://github.com/davezuko/react-redux-starter-kit
+* https://github.com/tomchentw/react-google-maps
