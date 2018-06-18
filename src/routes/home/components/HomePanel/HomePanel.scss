@@ -38,12 +38,55 @@
   margin-bottom: 5px;
 }
 
-.field {
+.inputGroup {
   position: relative;
+  padding-left: 30px;
+
+  &Prepend {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+  }
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    bottom: -50%;
+    width: 1px;
+    margin: 9px 0;
+    display: block;
+    background-image: linear-gradient(to bottom, $primary 30%, rgba(255, 255, 255, 0) 20%);
+    background-position: left;
+    background-size: 1px 5px;
+    background-repeat: repeat-y;
+  }
+
+  &:last-child:after {
+    display: none;
+  }
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 12px;
+  color: $primary;
 }
 
 .input {
-  padding-right: 30px;
+  width: 100%;
+
+  input {
+    padding-right: 30px;
+  }
 }
 
 .close {
@@ -57,7 +100,7 @@
   opacity: 0;
   cursor: pointer;
 
-  .field:hover & {
+  .inputGroup:hover & {
     opacity: 0.3;
 
     &:hover {
