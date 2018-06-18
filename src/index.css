@@ -6,3 +6,21 @@ body {
   margin: 0;
   padding: 0;
 }
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.justify {
+  display: table;
+  table-layout: fixed;
+}
+
+.justify > * {
+  display: table-cell;
+  width: 1%;
+}

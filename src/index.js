@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import deepForceUpdate from 'react-deep-force-update'
 import qs from 'qs'
+import 'normalize.css'
 
 import configureStore from './store/configureStore'
 import history from './history'

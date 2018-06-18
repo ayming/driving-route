@@ -1,9 +1,20 @@
+$header-height: 60px;
+
 .wrapper {
   position: relative;
   height: 100%;
 }
 
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: $header-height;
+  line-height: $header-height;
+}
+
 .body {
   height: 100%;
+  padding-top: $header-height;
   box-sizing: border-box;
 }

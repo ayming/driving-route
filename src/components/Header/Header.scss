@@ -1,0 +1,20 @@
+@import '../variables.scss';
+
+.wrapper {
+  box-sizing: border-box;
+  border-bottom: 1px solid $primary;
+}
+
+.title {
+  margin-left: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+
+  .first {
+    color: $primary;
+  }
+
+  .last {
+    color: $secondary;
+  }
+}
