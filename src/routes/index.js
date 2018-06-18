@@ -10,6 +10,12 @@ const routes = {
       path: '',
       load: () => import(/* webpackChunkName: 'home' */ './home'),
     },
+
+    // Wildcard routes, e.g. { path: '(.*)', ... } (must go last)
+    {
+      path: '(.*)',
+      load: () => import(/* webpackChunkName: 'not-found' */ './not-found'),
+    },
   ],
 
   async action({ next }) {
