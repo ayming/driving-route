@@ -1,0 +1,46 @@
+@import '../variables.scss';
+
+.wrapper {
+  box-sizing: border-box;
+  padding: 3px 6px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  color: #fff;
+  outline: 0;
+  cursor: pointer;
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.primary {
+  background-color: $primary;
+
+  &.outline {
+    border-color: $primary;
+    color: $primary;
+  }
+
+  &.text {
+    color: $primary;
+  }
+}
+
+.secondary {
+  background-color: $secondary;
+
+  &.outline {
+    border-color: $secondary;
+    color: $secondary;
+  }
+
+  &.text {
+    color: $secondary;
+  }
+}
+
+.outline, .text {
+  background-color: transparent;
+}
